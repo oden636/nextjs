@@ -8,7 +8,7 @@ import Footer from "components/Footers/Footer.js";
 import Sponsor from "components/Sections/Sponsor";
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/sponsors')
+  const res = await fetch('https://raw.githubusercontent.com/oden636/nextjs/master/public/static/sponsors.json')
   const sponsor = await res.json()
   return {
     props: {
