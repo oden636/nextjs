@@ -30,11 +30,11 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F"
+                  href="https://www.facebook.com/williamfarrclimbingwall/"
                   target="_blank"
                 >
                   <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-facebook text-lg leading-lg " />
-                  <span className="lg:hidden inline-block ml-2">Share</span>
+                  <span className="lg:hidden inline-block ml-2">Facebook</span>
                 </a>
               </li>
 
@@ -58,6 +58,7 @@ export default function Navbar(props) {
                   <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-github text-lg leading-lg " />
                   <span className="lg:hidden inline-block ml-2">Star</span>
                 </a>
+                <i className="fab fa-ghost"></i>
               </li>
             </ul>
           </div>

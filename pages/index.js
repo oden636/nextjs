@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Gallery from "react-photo-gallery"
 
 // components
 
@@ -9,15 +10,90 @@ import Sponsor from "components/Sections/Sponsor";
 
 export async function getStaticProps() {
   const res = await fetch('https://raw.githubusercontent.com/oden636/nextjs/master/public/static/sponsors.json')
-  const sponsor = await res.json()
+  const sponsor = await res.json();
+
+  const photos = [
+    {
+      src: '/img/a3-738x665.jpg',
+      width: 4,
+      height: 3
+    },
+    {
+      src: "/img/a1-1-738x665.jpg",
+      width: 4,
+      height: 3
+    },
+    {
+      src: "/img/wall-20.jpg",
+      width: 1,
+      height: 1
+    },
+    {
+      src: "/img/wall-21.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "/img/IMG_0069-002-770x665.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "/img/wall-12-e1505409770389.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "/img/wall-10-e1505409721214.jpg",
+      width: 4,
+      height: 3
+    },
+    {
+      src: "/img/2-770x586.jpg",
+      width: 3,
+      height: 2
+    },
+    {
+      src: "/img/1-439x665.jpg",
+      width: 3,
+      height: 3
+    },
+    {
+      src: "/img/0-439x665.jpg",
+      width: 4,
+      height: 3
+    },
+    {
+      src: '/img/a2-738x665.jpg',
+      width: 2,
+      height: 1
+    },
+    {
+      src: "/img/904784_10151622373007146_2011714067_o-770x665.jpg",
+      width: 3,
+      height: 2
+    },
+    {
+      src: "/img/J2-770x665.jpg",
+      width: 4,
+      height: 3
+    },
+    {
+      src: "/img/Jake-running-SNICE-770x665.jpg",
+      width: 6,
+      height: 4
+    }
+  ];
+
   return {
     props: {
       sponsor,
+      photos
     },
   }
 }
 
-export default function Index({ sponsor }) {
+export default function Index({ sponsor, photos }) {
   return (
     <>
       <Navbar transparent />
@@ -27,7 +103,7 @@ export default function Index({ sponsor }) {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('http://www.jakeshawclimbingtrust.com/wp-content/uploads/2015/06/Jake2.png')",
+                "url('/img/Jake2.png')",
             }}
           >
             <span
@@ -98,7 +174,7 @@ export default function Index({ sponsor }) {
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
                   <img
-                    src="http://www.jakeshawclimbingtrust.com/wp-content/uploads/2017/09/wall-20-480x480.jpg"
+                    src="/img/wall-20-480x480.jpg"
                     className="w-full align-middle rounded-t-lg"
                   />
                   <blockquote className="relative p-8 mb-4">
@@ -157,7 +233,7 @@ export default function Index({ sponsor }) {
                 <img
                   alt="..."
                   className="max-w-full rounded-lg shadow-lg"
-                  src="http://www.jakeshawclimbingtrust.com/wp-content/uploads/2015/06/10494571_836373743105076_500912564032924024_n.jpg"
+                  src="/img/10494571_836373743105076_500912564032924024_n.jpg"
                 />
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
@@ -183,152 +259,13 @@ export default function Index({ sponsor }) {
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">Gallery</h2>
                 <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record maximum.
+                  Just some of the amazing moments on our journey building the wall.
                 </p>
               </div>
             </div>
             <div className="flex flex-wrap">
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src="/img/team-1-800x800.jpg"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Ryan Tompson</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Web Developer
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button>
-                      <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src="/img/team-2-800x800.jpg"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Romina Hadid</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Marketing Specialist
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src="/img/team-3-800x800.jpg"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Alexa Smith</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      UI/UX Designer
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src="/img/team-4-470x470.png"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Jenna Kardi</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Founder and CEO
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button>
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
+              <div className="w-full">
+                <Gallery photos={photos} />
               </div>
             </div>
           </div>
