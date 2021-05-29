@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Gallery from "react-photo-gallery"
 
 // components
@@ -164,11 +163,6 @@ export default function Index({ sponsor, photos }) {
                   Jake’s wall is now a fine tribute to an exceptionally gifted and popular young man, who loved life and lived it to the full. 
                   It may also inspire others to enjoy climbing and the great outdoors as much as Jake did.
                 </p>
-                <Link href="/">
-                  <a href="#pablo" className="font-bold text-blueGray-700 mt-8">
-                    Do Something!
-                  </a>
-                </Link>
               </div>
 
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
@@ -255,7 +249,7 @@ export default function Index({ sponsor, photos }) {
 
         <section className="pt-20 pb-48">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center text-center mb-24">
+            <div className="flex flex-wrap justify-center text-center mb-8">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">Gallery</h2>
                 <p className="text-lg leading-relaxed m-4 text-blueGray-500">
@@ -314,11 +308,10 @@ export default function Index({ sponsor, photos }) {
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
                   <div className="flex-auto p-5 lg:p-10">
                     <h4 className="text-2xl font-semibold">
-                      Want to work with us?
+                      Want to contact us?
                     </h4>
                     <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">
-                      Complete this form and we will get back to you in 24
-                      hours.
+                      Complete this form and we will get back to you as soon as we can.
                     </p>
                     <div className="relative w-full mb-3 mt-8">
                       <label

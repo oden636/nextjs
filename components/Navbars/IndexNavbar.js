@@ -1,5 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+
+library.add(
+  faFacebook,
+  faEnvelope,
+  faPhone
+);
+
 // components
 
 import PagesDropdown from "components/Dropdowns/PagesDropdown.js";
@@ -33,7 +45,8 @@ export default function Navbar(props) {
                   href="https://www.facebook.com/williamfarrclimbingwall/"
                   target="_blank"
                 >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-facebook text-lg leading-lg " />
+                  <FontAwesomeIcon icon={['fab', 'facebook']} />
+                  {/* <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-facebook text-lg leading-lg " /> */}
                   <span className="lg:hidden inline-block ml-2">Facebook</span>
                 </a>
               </li>
@@ -41,22 +54,22 @@ export default function Navbar(props) {
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F&text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20NextJS%20UI%20Kit%20and%20Admin.%20Let%20Notus%20NextJS%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level."
+                  href="tel:07772468836"
                   target="_blank"
                 >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-twitter text-lg leading-lg " />
-                  <span className="lg:hidden inline-block ml-2">Tweet</span>
+                  <FontAwesomeIcon icon={['fas', 'phone']} />
+                  <span className="lg:hidden inline-block ml-2">Phone</span>
                 </a>
               </li>
 
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-auth-navbar"
+                  href="mailto:stevehall129@gmail.com"
                   target="_blank"
                 >
-                  <i className="lg:text-blueGray-200 text-blueGray-400 fab fa-github text-lg leading-lg " />
-                  <span className="lg:hidden inline-block ml-2">Star</span>
+                  <FontAwesomeIcon icon={['fas', 'envelope']} />
+                  <span className="lg:hidden inline-block ml-2">Email</span>
                 </a>
                 <i className="fab fa-ghost"></i>
               </li>
