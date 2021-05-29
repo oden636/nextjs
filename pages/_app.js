@@ -6,7 +6,6 @@ import Router from "next/router";
 
 import PageChange from "components/PageChange/PageChange.js";
 
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import "styles/tailwind.css";
 
 Router.events.on("routeChangeStart", (url) => {
@@ -43,8 +42,8 @@ export default function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <title>Notus NextJS by Creative Tim</title>
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+        <title>Jake Shaw Climbing Trust - Charity in memory of Jake Shaw</title>
+        {/* <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> */}
       </Head>
       <Component {...pageProps} />
     </React.Fragment>
