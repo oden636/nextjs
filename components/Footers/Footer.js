@@ -39,7 +39,7 @@ export default function Footer() {
               <div className="mt-6 lg:mb-0 mb-6">
                 <a
                   className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 p-2 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  href="https://www.facebook.com/williamfarrclimbingwall/"
+                  href="https://www.facebook.com/jakeshawclimbingtrust"
                 >
                   <FontAwesomeIcon icon={['fab', 'facebook']} size="lg" />
                 </a>
