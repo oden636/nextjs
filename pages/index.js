@@ -163,8 +163,17 @@ export default function Index({ sponsor, photos }) {
                   Jake’s wall is now a fine tribute to an exceptionally gifted and popular young man, who loved life and lived it to the full. 
                   It may also inspire others to enjoy climbing and the great outdoors as much as Jake did.
                 </p>
+                <h3 className="text-xl mb-2 font-semibold leading-normal">
+                  Next steps
+                </h3>
+                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600"> 
+                 Donations are always gratefully received!
+                  We will continue to work with new and existing contacts in the climbing community, 
+                  enabling others to discover the joy, challenge, and freedom of the great outdoors. 
+                  Our support will be directed to those who, for all kinds of reasons, 
+                  may find access to the outdoors more difficult.
+                </p>
               </div>
-
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
                   <img
