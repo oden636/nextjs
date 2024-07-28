@@ -255,31 +255,45 @@ export default function Index({ sponsor, photos }) {
             </div>
           </div>
         </section>
-        <section className="relative block py-24 lg:pt-0 bg-blueGray-800">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-              <div className="w-full lg:w-6/12 px-4">
+        <section className="relative py-24 bg-blueGray-800">
+          <div className="flex flexwrap justify-center container mx-auto px-4">
+            <div className="flex flex-wrap justify-center">
+              <div className="w-full px-4">
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200">
                   <div className="flex-auto p-5 lg:p-10">
-                    <h4 className="text-2xl font-semibold">
-                      Donations?
+                    <h4 className="text-3xl font-bold text-center">
+                      Donations
                     </h4>
                     <p className="leading-relaxed mt-1 mb-4 text-blueGray-500">
-                      All donations gratefully received!
+                      All donations gratefully received! For bank donations
                     </p>
-                    <div className="relative w-full mb-3 mt-8">
-                      
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="full-name">
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Full Name"
-                      />
+                    <div className="relative w-full mb-3">
+                      <p className="text-lg">
+                        <span className="text-lg font-semibold uppercase tracking-wide text-blueGray-600">Bank: </span> 
+                        TSB
+                      </p>
                     </div>
+                    <div className="relative w-full mb-3">
+                      <p className="text-lg">
+                        <span className="text-lg font-semibold uppercase tracking-wide text-blueGray-600">Sort Code: </span> 
+                        30-95-88
+                      </p>
+                    </div>
+                    <div className="relative w-full mb-3">
+                      <p className="text-lg">
+                        <span className="text-lg font-semibold uppercase tracking-wide text-blueGray-600">Account number: </span> 
+                        22465760
+                      </p>
+                    </div>
+                    <div className="relative w-full mb-3">
+                      <p className="text-lg">
+                        <span className="text-lg font-semibold uppercase tracking-wide text-blueGray-600">Account name: </span> 
+                        Jake Shaw Climbing Trust
+                      </p>
+                    </div>
+                    <p className="leading-relaxed mt-1 text-blueGray-500">
+                      For any other form of donation, please email <a className="font-semibold" href="mailto:stevehall129@gmail.com">stevehall129@gmail.com</a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -325,7 +339,7 @@ export default function Index({ sponsor, photos }) {
             </svg>
           </div>
 
-          <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
+          <div className="container mx-auto px-4">
             <div className="flex flex-wrap text-center justify-center">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold text-white">
